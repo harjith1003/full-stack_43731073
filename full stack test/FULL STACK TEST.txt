@@ -1,0 +1,97 @@
+SOURCE CODE
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Personal Finance Tracker</title>
+  <style>
+    body {
+      background-color: lightblue;
+      color: black;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: blue;
+    }
+    form {
+      margin: 0 auto;
+      width: 300px;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px gray;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+      border: 1px solid gray;
+      border-radius: 4px;
+    }
+    button {
+      background-color: blue;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #list {
+      margin: 20px auto;
+      width: 300px;
+      background: white;
+      border-radius: 8px;
+      border: 1px solid gray;
+      padding: 10px;
+    }
+    #list p {
+      background-color: aliceblue;
+      margin: 5px 0;
+      padding: 5px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Personal Finance Tracker</h1>
+
+  <form id="form">
+    <input id="item" type="text" placeholder="Item name">
+    <input id="amount" type="number" placeholder="Amount">
+    <input id="date" type="date">
+    <input id="day" type="text" placeholder="Day">
+    <select id="category" required>
+      <option value="">Select category</option>
+      <option>food</option>
+      <option>movie</option>
+      <option>trip</option>
+      <option>other</option>
+    </select>
+    <button type="submit">Add</button>
+  </form>
+
+  <div id="list"></div>
+
+  <script>
+    let form = document.getElementById("form");
+    let list = document.getElementById("list");
+
+    form.onsubmit = function(e) {
+      e.preventDefault();
+
+      let item = document.getElementById("item").value;
+      let amount = document.getElementById("amount").value;
+      let date = document.getElementById("date").value;
+      let day = document.getElementById("day").value;
+      let category = document.getElementById("category").value;
+
+      list.appendChild(p);
+
+      form.reset();
+    }
+  </script>
+
+</body>
+</html>
